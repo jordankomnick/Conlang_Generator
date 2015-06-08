@@ -30,6 +30,12 @@ h2 {
 	width: 33%;
 }
 
+.options {
+	clear: both;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .submit {
 	clear: both;
 	margin-left: auto;
