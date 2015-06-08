@@ -2,11 +2,17 @@
 <!doctype html>
 <html ng-app="generateWordsApp">
   <head>
+ 	<link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
     <script src="generateWords.js"></script>
   </head>
   <body>
+  <div class="content">
+  	<div class="heading">
+  	<h1>Let's make up some words!</h1>
+  	</div>
   	<div ng-controller="GeneratorController as generator">
+  	<div class="sounds">
     <h2>Initials</h2>
       <ul>
         <li ng-repeat="initial in generator.initials">
@@ -18,6 +24,8 @@
                placeholder="Add new initial">
         <input type="submit" value="Add">
       </form>
+      </div>
+      <div class="sounds">
       <h2>Medials</h2>
       <ul>
         <li ng-repeat="medial in generator.medials">
@@ -29,6 +37,8 @@
                placeholder="Add new medial">
         <input type="submit" value="Add">
       </form>
+      </div>
+      <div class="sounds">
       <h2>Finals</h2>
       <ul>
         <li ng-repeat="final in generator.finals">
@@ -40,13 +50,19 @@
                placeholder="Add new final">
         <input type="submit" value="Add">
       </form>
+      </div>
+      <div class="submit">
       <input type="submit" value="Generate" ng-click="generator.generateWords()">
+      </div>
+      <div class="words">
       <h2>Words</h2>
       <ul>
         <li ng-repeat="word in generator.words">
           <span>{{word.text}}</span>
         </li>
       </ul>
+      </div>
+    </div>
     </div>
   </body>
 </html>
