@@ -27,5 +27,6 @@ Todo:
   -Adding blank puts "blank" in the list
   -Automatically generate words for a list of common concepts
   -Export wordlist to .txt or .csv
+  -Styling
   -Other features as I think of them
   
