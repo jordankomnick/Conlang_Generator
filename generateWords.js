@@ -67,6 +67,7 @@ angular.module('generateWordsApp', []).controller(
 			};
 
 			generator.generateWords = function() {
+				generator.words = [];
 				for (var i = 0; i < generator.numWords; i++) {
 					var word = "";
 					var numSyllRand = Math.floor(Math.random() * (generator.maxSyll - generator.minSyll + 1)) + generator.minSyll;
