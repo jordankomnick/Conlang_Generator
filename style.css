@@ -13,6 +13,25 @@ h2 {
 	text-align: center;
 }
 
+input[type="number"] {
+  	width: 50px;
+  	display: inline;
+  	margin-right: 5px;
+}
+
+.soundForm {
+	float: left;
+}
+
+.soundItem {
+	padding: 5px;
+}
+
+.soundText {
+	float: left;
+	padding-right: 5px;
+}
+
 .content {
 	border-style: double;
 	border-width: 3px;

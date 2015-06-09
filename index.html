@@ -3,6 +3,7 @@
 <html ng-app="generateWordsApp">
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
 <script src="generateWords.js"></script>
@@ -16,7 +17,7 @@
 			<div class="sounds">
 				<h2>Initials</h2>
 				<ul>
-					<li ng-repeat="initial in generator.initials"><span>{{initial.text}} <a href="#" ng-click="generator.deleteInitial(initial)">x</a></span>
+					<li class="soundItem" ng-repeat="initial in generator.initials"><span class="soundText">{{initial.text}} </span><form class="soundForm"><input type="number" ng-model="initial.freq" min="1" max="99" step= "1"></form><span class="delete"><a href="#" ng-click="generator.deleteInitial(initial)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addInitial()">
@@ -28,7 +29,7 @@
 			<div class="sounds">
 				<h2>Medials</h2>
 				<ul>
-					<li ng-repeat="medial in generator.medials"><span>{{medial.text}} <a href="#" ng-click="generator.deleteMedial(medial)">x</a></span>
+					<li class="soundItem" ng-repeat="medial in generator.medials"><span class="soundText">{{medial.text}} </span><form class="soundForm"><input type="number" ng-model="medial.freq" min="1" max="99" step= "1"></form><span class="delete"><a href="#" ng-click="generator.deleteMedial(medial)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addMedial()">
@@ -40,7 +41,7 @@
 			<div class="sounds">
 				<h2>Finals</h2>
 				<ul>
-					<li ng-repeat="final in generator.finals"><span>{{final.text}} <a href="#" ng-click="generator.deleteFinal(final)">x</a></span>
+					<li class="soundItem" ng-repeat="final in generator.finals"><span class="soundText">{{final.text}} </span><form class="soundForm"><input type="number" ng-model="final.freq" min="1" max="99" step= "1"></form><span class="delete"><a href="#" ng-click="generator.deleteFinal(final)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addFinal()">
