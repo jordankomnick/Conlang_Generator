@@ -25,6 +25,8 @@ angular.module('generateWordsApp', []).controller(
 			generator.maxSyll = 5;
 
 			generator.addInitial = function() {
+				if(!generator.initialText)
+					generator.initialText = "*blank*";
 				generator.initials.push({
 					text : generator.initialText
 				});
@@ -32,6 +34,8 @@ angular.module('generateWordsApp', []).controller(
 			};
 
 			generator.addMedial = function() {
+				if(!generator.medialText)
+					generator.medialText = "*blank*";
 				generator.medials.push({
 					text : generator.medialText
 				});
@@ -39,6 +43,8 @@ angular.module('generateWordsApp', []).controller(
 			};
 
 			generator.addFinal = function() {
+				if(!generator.finalText)
+					generator.finalText = "*blank*";
 				generator.finals.push({
 					text : generator.finalText
 				});
@@ -49,7 +55,6 @@ angular.module('generateWordsApp', []).controller(
 				for (var i = 0; i < generator.numWords; i++) {
 					var word = "";
 					var numSyllRand = Math.floor(Math.random() * (generator.maxSyll - generator.minSyll + 1)) + generator.minSyll;
-					console.log(numSyllRand);
 					for (var j = 0; j < numSyllRand; j++) {
 						var initialRand = Math.floor(Math.random()
 								* generator.initials.length);
@@ -57,7 +62,7 @@ angular.module('generateWordsApp', []).controller(
 								* generator.medials.length);
 						var finalRand = Math.floor(Math.random()
 								* generator.finals.length);
-						word += generator.initials[initialRand].text + generator.medials[medialRand].text + generator.finals[finalRand].text;
+						word += (generator.initials[initialRand].text == "*blank*" ? "" : generator.initials[initialRand].text) + (generator.medials[medialRand].text == "*blank*" ? "" : generator.medials[medialRand].text) + (generator.finals[finalRand].text == "*blank*" ? "" : generator.finals[finalRand].text);
 					}
 					generator.words.push({
 						text : word
