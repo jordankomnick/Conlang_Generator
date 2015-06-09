@@ -50,6 +50,21 @@ angular.module('generateWordsApp', []).controller(
 				});
 				generator.finalText = '';
 			};
+			
+			generator.deleteInitial = function(toDelete) {
+				var index = generator.initials.indexOf(toDelete.text);
+				generator.initials.splice(index, 1);
+			};
+			
+			generator.deleteMedial = function(toDelete) {
+				var index = generator.medials.indexOf(toDelete.text);
+				generator.medials.splice(index, 1);
+			};
+			
+			generator.deleteFinal = function(toDelete) {
+				var index = generator.finals.indexOf(toDelete.text);
+				generator.finals.splice(index, 1);
+			};
 
 			generator.generateWords = function() {
 				for (var i = 0; i < generator.numWords; i++) {

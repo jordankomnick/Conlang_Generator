@@ -16,7 +16,7 @@
 			<div class="sounds">
 				<h2>Initials</h2>
 				<ul>
-					<li ng-repeat="initial in generator.initials"><span>{{initial.text}}</span>
+					<li ng-repeat="initial in generator.initials"><span>{{initial.text}} <a href="#" ng-click="generator.deleteInitial(initial)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addInitial()">
@@ -28,7 +28,7 @@
 			<div class="sounds">
 				<h2>Medials</h2>
 				<ul>
-					<li ng-repeat="medial in generator.medials"><span>{{medial.text}}</span>
+					<li ng-repeat="medial in generator.medials"><span>{{medial.text}} <a href="#" ng-click="generator.deleteMedial(medial)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addMedial()">
@@ -40,7 +40,7 @@
 			<div class="sounds">
 				<h2>Finals</h2>
 				<ul>
-					<li ng-repeat="final in generator.finals"><span>{{final.text}}</span>
+					<li ng-repeat="final in generator.finals"><span>{{final.text}} <a href="#" ng-click="generator.deleteFinal(final)">x</a></span>
 					</li>
 				</ul>
 				<form ng-submit="generator.addFinal()">
