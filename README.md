@@ -20,12 +20,10 @@ How to use:
 5. Create grammar, syntax, and a writing system for your new language!
 
 Todo:
-  -Fix bug when adding blank sound
   -Delete button
   -Set frequency with an input box, don't allow duplicates
   -Generate button clears list rather than adding onto it
   -Option for breaking up syllables with a character such as "-"
-  -Adding blank puts "blank" in the list
   -Automatically generate words for a list of common concepts
   -Export wordlist to .txt or .csv
   -More styling
